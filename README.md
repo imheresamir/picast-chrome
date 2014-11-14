@@ -1,4 +1,4 @@
-picast-chrome-extension
+picast-chrome
 =======================
 
-Picast extension for Chrome
+Picast app for Chrome
