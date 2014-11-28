@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "PiCast",
+  "description": "Adds a play button to YouTube video pages, casting the video to a secondary display through the RaspberryPi.",
+  "version": "0.1",
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "css": ["youtube.css"],
+      "js": ["youtube.js"]
+    }
+  ],
+
+  "web_accessible_resources": ["*.svg", "app/*"],
+
+  "permissions": ["<all_urls>", "webNavigation", "tabs"],
+
+  "content_security_policy": "script-src 'self' https://code.famo.us; object-src 'self'"
+}
